@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 189, "left": 41.2, "attrs": {} },
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": -57, "left": -32.4, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 263.15,
+      "left": 105.6,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 268.8,
+      "left": 182.4,
+      "rotate": 180,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "bz1:1", "bb1:18t.d", "", [ "$bb" ] ],
+    [ "bz1:2", "bb1:17t.d", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:5t.d", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:11t.d", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:tn.9", "green", [ "v0" ] ],
+    [ "bb1:tn.12", "bz1:2", "green", [ "v0" ] ],
+    [ "bz1:1", "mega:3", "green", [ "v-124.8", "h144", "v-211.2", "h-172.8" ] ],
+    [ "mega:5V", "r1:1", "red", [ "v54.9", "h-26.5" ] ],
+    [ "mega:GND.3", "bb1:tp.16", "black", [ "v54.9", "h98.25" ] ]
+  ],
+  "dependencies": {}
+}
