@@ -20,5 +20,8 @@ int main(int args, char** argv)
 
 	printf("size of intmax_t: %lu\n",sizeof(intmax_t));//long
 							       
+	printf("size of float: %lu\n",sizeof(float));//float
+	printf("size of double: %lu\n",sizeof(double));//double
+	printf("size of long double: %lu\n",sizeof(long double));//long double
 	return 0;
 }
